@@ -1,0 +1,36 @@
+navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2%
+}
+
+.namePage {
+    font-family: var(--fontLetter1);
+    font-size: 10rem;
+    color: var(--colorYellow);
+    position: relative;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.buttonResult {
+    font-family: var(--fontLetter2);
+    font-size: 3rem;
+    color: var(--colorWhite);
+    background-color: var(--colorPink);
+    border-radius: 1.3rem;
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    padding: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fontLetter2);
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+

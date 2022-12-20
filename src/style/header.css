@@ -3,7 +3,7 @@ navbar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 2%
+    padding: 4%;
 }
 
 .namePage {
@@ -31,6 +31,9 @@ navbar {
     align-items: center;
     font-family: var(--fontLetter2);
     font-size: 3rem;
-    margin-bottom: 5rem;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    color: var(--colorWhite);
 }
 

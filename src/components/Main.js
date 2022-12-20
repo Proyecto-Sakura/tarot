@@ -11,10 +11,8 @@ function Main() {
   }, [])
 
    const disappear= (event)=> { 
-    /*setClase("displayNone");*/
     console.log(event.target)
-
-   }
+    }
   return (
     <>
     <div className="container">
@@ -22,11 +20,10 @@ function Main() {
         cards.map((card,index) => {
             if (card.cardsReverse.sakuraReverse){
                 return(
-            <button className= "disappear1"  onClick = {disappear}  key={index}> 
-               <img
+            <button onClick = {disappear}  key={index}> 
+            <img className='image'
                src={card.cardsReverse.sakuraReverse}
-               alt= {card.spanishName} 
-               />
+               alt= {card.spanishName}/>
                   </button>
                 );
               }
@@ -37,6 +34,5 @@ function Main() {
     </>
   );
 }
-      
 
 export default Main

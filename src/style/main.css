@@ -6,7 +6,8 @@
   grid-template-rows: repeat(3, 1fr);
   row-gap: 2rem;
   justify-content: center;
-  margin: 8%;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
     
 .displayNone {

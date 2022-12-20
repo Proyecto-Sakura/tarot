@@ -1,13 +1,24 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Jost:wght@300&family=Lato:wght@100;300;400;700;900&family=Rubik:wght@300;400&display=swap');
+@import url('./style/header.css');
+@import url('./style/main.css');
+
+:root{ 
+  --colorWhite:#FFFFFF;
+  --colorYellow:#F4B40A; 
+  --colorPink:#F40067;
+  --colorPurple:#a855c9;
+  --colorBlue:#6078a8; 
+  --colorBlack: #000000;
+  --fontLetter1: "Dancing Script";
+  --fontLetter2: 'Rubik', serif;
+}
+html {
+  font-size: 62.5%;
+}
+  
+*{ padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

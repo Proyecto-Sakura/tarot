@@ -9,7 +9,12 @@ function Main() {
     data.get().then(res => res.json())
     .then (res => setCards(res))
   }, [])
-  
+
+   const disappear= (event)=> { 
+    /*setClase("displayNone");*/
+    console.log(event.target)
+
+   }
   return (
     <>
     <div className="container">
@@ -17,12 +22,12 @@ function Main() {
         cards.map((card,index) => {
             if (card.cardsReverse.sakuraReverse){
                 return(
-            <div key={index}> 
+            <button className= "disappear1"  onClick = {disappear}  key={index}> 
                <img
                src={card.cardsReverse.sakuraReverse}
                alt= {card.spanishName} 
                />
-                  </div>
+                  </button>
                 );
               }
               return <div className="displayNone"></div>;

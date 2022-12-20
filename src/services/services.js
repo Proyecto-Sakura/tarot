@@ -10,7 +10,5 @@ export const GetCard = () => {
     return{
         get
     }
-
-
 }
 

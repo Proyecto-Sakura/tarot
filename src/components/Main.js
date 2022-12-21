@@ -10,9 +10,16 @@ function Main() {
     .then (res => setCards(res))
   }, [])
 
-   const disappear= (event)=> { 
+  const [selectedCard,setSelectedCard]= useState([]);
+  const addCard = (card) => {
+    setSelectedCard([...selectedCard, card]);
+    console.log(selectedCard);
+ };
+
+
+   /*const disappear= (event)=> { 
     console.log(event.target)
-    }
+    }*/
   return (
     <>
     <div className="container">
@@ -20,7 +27,7 @@ function Main() {
         cards.map((card,index) => {
             if (card.cardsReverse.sakuraReverse){
                 return(
-            <button onClick = {disappear}  key={index}> 
+            <button /*onClick = {disappear}*/  key={index}> 
             <img className='image'
                src={card.cardsReverse.sakuraReverse}
                alt= {card.spanishName}/>

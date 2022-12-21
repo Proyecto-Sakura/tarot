@@ -15,6 +15,15 @@ function Main() {
     console.log(event.target)
 
    }
+
+   const [lecture,setLecture] = useState([])
+   const saveCards = (card) => {  
+    if (lecture && lecture.length <3) {
+      setLecture ([...lecture,{...card}])
+      console.log (lecture)
+      return
+    }
+  }
   return (
     <>
     <div className="container">
@@ -23,10 +32,10 @@ function Main() {
             if (card.cardsReverse.sakuraReverse){
                 return(
             <button className= "disappear1"  onClick = {disappear}  key={index}> 
-               <img
+               <img className= "image"
                src={card.cardsReverse.sakuraReverse}
                alt= {card.spanishName} 
-               />
+               onClick = { ()=>saveCards(card)}/>
                   </button>
                 );
               }

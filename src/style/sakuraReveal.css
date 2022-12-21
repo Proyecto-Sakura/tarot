@@ -1,0 +1,12 @@
+.cards-container{
+    width: 80%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  row-gap: 1rem;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-bottom: 5rem;
+}

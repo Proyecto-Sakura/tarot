@@ -3,7 +3,11 @@ navbar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD
     margin: 0% 5% 1% 5%;
+=======
+    padding: 4%;
+>>>>>>> c594b988ff0c57ade9b8a4d85f08403c947aec69
 }
 
 .namePage {
@@ -28,8 +32,16 @@ navbar {
     flex-direction: column;
     align-items: center;
     font-family: var(--fontLetter2);
+<<<<<<< HEAD
     color: var(--colorWhite);
     font-size: 2rem;
     margin-bottom: 1rem;
+=======
+    font-size: 3rem;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    color: var(--colorWhite);
+>>>>>>> c594b988ff0c57ade9b8a4d85f08403c947aec69
 }
 

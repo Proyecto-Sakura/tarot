@@ -1,4 +1,5 @@
 .container {
+<<<<<<< HEAD
   width: 63%;
   height: 50%;
   display: grid;
@@ -7,6 +8,18 @@
   row-gap: 1rem;
   justify-content: center;
   margin: 1rem 0rem 2rem 20rem;
+=======
+  width: 80%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(3.9rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 1rem;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-bottom: 5rem;
+>>>>>>> c594b988ff0c57ade9b8a4d85f08403c947aec69
 }
     
 .displayNone {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {GetCard} from '../services/services';
 import "../style/main.css"
+import { Link } from 'react-router-dom';
 
 function Main() {
     const [cards, setCards]= useState([]);
@@ -10,18 +11,14 @@ function Main() {
     .then (res => setCards(res))
   }, [])
 
-   const disappear= (event)=> { 
-    console.log(event.target)
-   }
-
-   const [lecture,setLecture] = useState([])
-   const saveCards = (card) => {  
-    if (lecture && lecture.length <3) {
+  const [lecture,setLecture] = useState([])
+  function saveCard(card) {
+      if(lecture.length<3) {
       setLecture ([...lecture,{...card}])
-      console.log (lecture)
-      return
-    }
-   }
+     }
+     console.log(lecture)
+     }
+     
   return (
     <>
     <div className="container">
@@ -29,18 +26,20 @@ function Main() {
         cards.map((card,index) => {
             if (card.cardsReverse.sakuraReverse){
                 return(
-            <button onClick = {disappear}  key={index}> 
-            <img className= "image" className='image'
+                <div key={index}> 
+                 <button onClick={()=> saveCard(card)}><img className= "image"
                src={card.cardsReverse.sakuraReverse}
                alt= {card.spanishName} 
-               />
-                  </button>
+               /></button>
+                  </div>
                 );
               }
               return <div className="displayNone"></div>;
             })
           : "No hay cards"}
       </div>
+      <Link className='buttonResult' to={`/secondPage`} state={[...lecture]}> 
+    Ver Resultado </Link> 
     </>
   );
 }

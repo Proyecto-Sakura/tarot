@@ -1,12 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
-import Reveal from '../components/Reveal'
+// import { useLocation} from 'react-router-dom';
+import Card from '../components/Card';
+
 
 function SecondPage() {
+ /* let location = useLocation();
+  console.log('Este es el estado', location.state);*/
   return (
     <div>
-        <Header/>
-        <Reveal onClick = {this.disappear}/>
+        <Header/> 
+        <Card/> 
     </div>
   )
 }

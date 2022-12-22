@@ -21,7 +21,7 @@ import withReactContent from "sweetalert2-react-content";
         MySwal.fire({
           title: <p>Ya escogiste las tres cartas.</p>,
           background: 'var (--colorPurple)',
-          confirmButtonText: 'Cool'
+          confirmButtonText: 'Ok'
         })
       }
     }

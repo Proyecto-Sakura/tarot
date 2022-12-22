@@ -20,6 +20,6 @@ navbar {
     font-family: var(--fontLetter2);
     color: var(--colorWhite);
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 0% 10% 1% 10%;
 }
 

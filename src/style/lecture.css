@@ -1,0 +1,40 @@
+.info {
+    display:none
+}
+.content {
+    width: 80%;
+    display: flex;  
+    flex-direction: row;    
+    justify-content: space-around;
+    padding-bottom: 10rem;
+    gap: 1rem;
+    margin: auto;
+}
+
+.lecturetime {
+    width: 100%;    
+    cursor: pointer; 
+    color: var(--colorWhite);   
+    background-color: rgb(255, 192, 203, .4);    
+    display: flex;    
+    flex-direction: column;    
+    align-items: center
+}
+
+.lecturetime h2 {
+    font-size: 3rem;
+    padding: 1rem;
+
+}
+
+.lecturetime p {
+    font-size: 2rem;
+    padding: 1rem;
+
+
+}
+
+.image2 {
+    width: 15rem;
+    height: 25rem;
+}

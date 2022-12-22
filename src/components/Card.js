@@ -1,25 +1,46 @@
-import React from 'react'
-import { useLocation } from 'react-router';
+import React, {useState} from 'react'
 import "../style/main.css"
+import Swal from 'sweetalert2'
+import ReactCardFlip from 'react-card-flip';
+import "../style/card.css"
+import withReactContent from "sweetalert2-react-content";
 
-function Card() {
-    let location = useLocation();
-    const selectedcard= 
+  export let lecture = [];
+  
+    const Card = ({id, reverse, frontImage, meaning, cardName }) => {
+    const [isFlipped, setIsFlipped] = useState (false)
 
-    /*const [cards, setCards]= useState([]);
-   useEffect(() => {
-    const data = GetCard();
-    data.get().then(res => res.json())
-    .then (res => setCards(res))
-  }, [])
-  function SecondPage() {
-    let location = useLocation();*/
-    console.log('Este es el estado', location.state);
-  return (
+
+    const MySwal = withReactContent(Swal);
     
-    <img className= "image"
-               src={location.state.sakuraCard}
-               alt= {location.state.spanishName} />
+  function saveCard() {
+      if (lecture.length < 3) {
+        lecture.push ({id, meaning, frontImage })
+        setIsFlipped(!isFlipped)
+      } else {
+        MySwal.fire({
+          title: <p>Ya escogiste las tres cartas.</p>,
+          background: 'var (--colorPurple)',
+          confirmButtonText: 'Cool'
+        })
+      }
+    }
+    console.log(lecture);
+  return (
+    <ReactCardFlip isFlipped = {isFlipped}>
+         <img className= "image card-animation"
+               src={reverse}
+               alt= {cardName}
+               meaning = {meaning}
+               id = {id} 
+               onClick = {() => saveCard()} />
+        <img className= "image card-animation"
+               src={frontImage}
+               alt= {cardName} 
+               meaning = {meaning} 
+               id ={id} />
+    </ReactCardFlip>
+   
 
   )
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {GetCard} from '../services/services';
 import "../style/main.css"
 import { Link } from 'react-router-dom';
+import Card from './Card';
+import shuffle from 'lodash.shuffle';
 
 function Main() {
     const [cards, setCards]= useState([]);
@@ -9,36 +11,18 @@ function Main() {
     const data = GetCard();
     data.get().then(res => res.json())
     .then (res => setCards(res))
+    shuffle (data);
   }, [])
 
-  const [lecture,setLecture] = useState([])
-  function saveCard(card) {
-      if(lecture.length<3) {
-      setLecture ([...lecture,{...card}])
-     }
-     console.log(lecture)
-     }
-     
-  return (
+   return (
     <>
     <div className="container">
-    {cards !==[] ?
-        cards.map((card,index) => {
-            if (card.cardsReverse.sakuraReverse){
-                return(
-                <div key={index}> 
-                 <button onClick={()=> saveCard(card)}><img className= "image"
-               src={card.cardsReverse.sakuraReverse}
-               alt= {card.spanishName} 
-               /></button>
-                  </div>
-                );
-              }
-              return <div className="displayNone"></div>;
-            })
-          : "No hay cards"}
+    {cards !==[] ?(
+        cards.map((card,index) => (
+              <Card key={index} id={card.id} reverse={card.cardsReverse.sakuraReverse} frontImage={card.sakuraCard} meaning = {card.meaning} cardName = {card.spanishName} cardObject={card} /> 
+        ))) : ("No hay cards")}
       </div>
-      <Link className='buttonResult' to={`/secondPage`} state={[...lecture]}> 
+      <Link className='buttonResult' to={`/secondPage`} > 
     Ver Resultado </Link> 
     </>
   );

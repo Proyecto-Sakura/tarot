@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../components/Header'
-// import { useLocation} from 'react-router-dom';
-import Card from '../components/Card';
+import Lecture from '../components/Lecture';
 
 
 function SecondPage() {
- /* let location = useLocation();
-  console.log('Este es el estado', location.state);*/
+
+  
   return (
-    <div>
+    <div className = "backGround">
         <Header/> 
-        <Card/> 
+        <Lecture/> 
+
     </div>
   )
 }

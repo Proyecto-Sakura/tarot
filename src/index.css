@@ -22,3 +22,7 @@ html {
   box-sizing: border-box;
 }
 
+.backGround{
+  background-image: url("./assets/fondoSakura.jpg") ;
+  width: 100%;
+}

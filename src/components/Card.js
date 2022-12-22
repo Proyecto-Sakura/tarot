@@ -15,7 +15,7 @@ import withReactContent from "sweetalert2-react-content";
     
   function saveCard() {
       if (lecture.length < 3) {
-        lecture.push ({id, meaning, frontImage })
+        lecture.push ({id, meaning, frontImage, cardName })
         setIsFlipped(!isFlipped)
       } else {
         MySwal.fire({

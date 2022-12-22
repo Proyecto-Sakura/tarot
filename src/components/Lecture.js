@@ -12,6 +12,7 @@ function Lecture() {
                 {index === 1 && <h2>Presente</h2>}
                 {index === 2 && <h2>Futuro</h2>} 
                 <img className="image2" key={card.id} src={card.frontImage} alt={card.cardName} />
+                <p>{card.cardName}</p>
                 <p>{card.meaning}</p>
             </div>        ))      }
     </div>

@@ -24,6 +24,7 @@ function Main() {
       </div>
       <Link className='buttonResult' to={`/secondPage`} > 
     Ver Resultado </Link> 
+    
     </>
   );
 }
